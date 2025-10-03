@@ -1,0 +1,395 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KARAN-PORTFOLIO</title>
+ <link rel="icon" href="ks.png">
+   <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+      outline: none;
+      user-select: none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #12102d;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      /* added by AI for smooth scrolling */
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      height: 60px;
+      background-color: #19163d;
+      /* added by AI to separate nav visually */
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+      /* added by AI for smooth hover effects */
+    }
+
+    nav ul li a:hover {
+      color: #a096f3;
+      font-size: 1.03rem;
+      /* subtle hover grow */
+    }
+
+    .left {
+      font-size: 1.5rem;
+    }
+
+    .firstsection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 100px 20px;
+      /* added by AI for spacing */
+      flex-wrap: wrap;
+      /* added by AI to support responsive layout */
+    }
+
+    .leftsection {
+      font-size: 2.5rem;
+      max-width: 600px;
+      /* added by AI to prevent overflow */
+      user-select: none;
+    }
+
+    .rightsection img {
+      height: auto;
+      width: 100%;
+      max-width: 400px;
+      /* responsive image control */
+      outline: none;
+    }
+
+    .color {
+      color: #8266ca;
+    }
+
+    #element {
+      color: #a096f3;
+    }
+
+    .secondsection,
+    .about-section,
+    .projects-section,
+    .services-section {
+      max-width: 80vw;
+      margin: auto;
+      padding: 60px 0;
+      /* added by AI for spacing */
+    }
+
+    main hr {
+      border: 0;
+      height: 1px;
+      background: #5c5bc2;
+      margin: 40px auto;
+      width: 80%;
+    }
+
+    .secondsection h1,
+    .services-section h1,
+    .about-section h1,
+    .projects-section h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .grey-text {
+      color: #d3d3d3a8;
+    }
+
+    .horizental {
+      background-color: white;
+      height: 2px;
+      margin: 70px 0;
+    }
+
+    .services-container {
+      user-select: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      background: #1e1b3a;
+      padding: 20px;
+      flex: 1 1 250px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      background-color: #282450;
+    }
+
+    footer {
+      background-color: rgba(63, 58, 58, 0.511);
+      padding: 10px 20px;
+      /* added by AI */
+    }
+
+    .footer2 {
+      display: flex;
+      justify-content: space-between;
+      /* improved layout */
+      align-items: center;
+      flex-wrap: wrap;
+      /* responsive design added by AI */
+    }
+
+    .footer2 a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+      /* added by AI */
+    }
+
+    .footer2 a:hover {
+      color: #abc7f7;
+    }
+
+    .logo-flip-container {
+      width: 45px;
+      height: 45px;
+      perspective: 1000px;
+      /* added for 3D effect */
+    }
+
+    .logo-flip {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: flipLogo 2.5s ease-in-out 1;
+      /* added by AI */
+    }
+
+    .logo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid #cebababa;
+      position: relative;
+      display: flex;
+      backface-visibility: hidden;
+    }
+
+    .logo.back {
+      transform: rotateY(180deg);
+    }
+
+    .red {
+      color: #ff0000;
+    }
+
+    .green {
+      color: #1edf1e;
+    }
+
+    .text {
+      user-select: none;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        /* responsive nav layout */
+      }
+
+      .firstsection {
+        flex-direction: column;
+        text-align: center;
+        /* center text on small screens */
+      }
+
+      .rightsection {
+        margin-top: 20px;
+        /* spacing for mobile */
+      }
+
+      .services-container {
+        flex-direction: column;
+      }
+    }
+
+    .project a {
+      text-decoration: none;
+      color: white;
+
+    }
+ 
+    </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo-flip-container">
+        <div class="logo-flip">
+          <a href="https://instagram.com/karano1o" target="_blank" title="Instagram">
+            <img src="ks.png" alt="Original Logo" class="logo front" />
+          </a>
+        </div>
+      </div>
+
+      <h2 class="text">WHILE THEY <span class="red">GRIND</span> WE <span class="green">AUTOMATE</span></h2>
+
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="firstsection" id="home">
+      <div class="leftsection">
+        <p>
+          Hi, there! I'm <span class="color">Karan</span><br />
+          and I'm a passionate<br />
+          <span id="element"></span>
+        </p>
+      </div>
+
+      <div class="rightsection">
+        <img src="dev.png" alt="Developer Illustration" />
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+      <h1>Services I Offer</h1>
+      <div class="services-container">
+        <div class="service-card">
+          <i class="fas fa-code fa-2x"></i>
+          <h3>Web Development</h3>
+          <p>I build responsive, clean, and fast websites using HTML, CSS, JS, and modern tools.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-video fa-2x"></i>
+          <h3>Video Editing</h3>
+          <p>High-quality video edits for social media, YouTube, or brand content.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-robot fa-2x"></i>
+          <h3>Automation</h3>
+          <p>Custom automation tools to save your time using scripts or no-code tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <h1>Projects</h1>
+      <p>Here’s a glimpse of real projects I’ve built — including frontend websites, automations, and tools I use or
+        share with others.</p>
+
+      <div class="project-list">
+        <div class="project">
+          <h3>✅ <a href="/" target="_blank" title="click to visit">Portfolio Website </a></h3>
+          <p>A clean and responsive personal portfolio built using HTML, CSS, and JavaScript. Showcases my skills and
+            projects.</p>
+        </div>
+
+        <div class="project">
+          <h3>✅ <a href="/" target="_blank">WEB TO APP BUILDER<span style="color:#515151c9">(in
+                process)</span></a></h3>
+          <p>A saas product that will optimize the time of conversion to web to app in affordble price</p>
+        </div>(in process)
+
+        <div class="project">
+          <h3>✅ <a href="/" target="_blank">YouTube Thumbnail Editor<span style="color:#515151c9">(in
+                process)</span></a></h3>
+          <p>A browser-based tool to quickly generate YouTube thumbnails using preset styles and drag-and-drop UI (built
+            with JS).</p>
+        </div>
+
+        <!-- Add more real projects -->
+        <div class="project">
+          <h3>✅ <a href="/" target="_blank">Username & Domain Checker<span style="color:#515151c9">(in
+                process)</span></a></h3>
+          <p>A real-time app that checks availability of usernames across platforms and domains (HTML, JS + external
+            APIs).</p>
+        </div>
+        <span>(in process)</span>
+        <div class="project">
+          <h3>✅ <a href="/" target="_blank" title="click to visit">Weather App<span style="color:#515151c9">(in
+                process)</span></a></h3>
+          <p>Displays current weather using OpenWeather API. Built using JavaScript and responsive CSS design.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <h1>About Me</h1>
+      <p>I’m a passionate developer who loves to build clean and responsive websites and tools that make life easier.
+        I'm currently working on full-stack web development and automation solutions for individuals and businesses.</p>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <div class="footer2">
+      <p>&copy; 2025 Xksai All rights reserved.</p>
+      <a href="https://instagram.com/karano1o" target="_blank"><i class="fab fa-instagram"></i>karano1o</a>
+    </div>
+  </footer>
+
+  <!-- Typed.js for typing effect -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    const typed = new Typed('#element', {
+      strings: ['Web Developer', 'Video Editor'],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true,
+      backDelay: 1500,
+      smartBackspace: true,
+    });
+  </script>
+</body>
+
+</html>
